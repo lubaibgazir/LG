@@ -11,11 +11,11 @@ app.config(['$routeProvider', '$locationProvider', '$httpProvider', function ($r
 	'use strict';
 
 	$routeProvider
-		.when('/home', {
-			templateUrl: 'templates/home.html'
+		.when('/', {
+			templateUrl: 'templates/header.html'
 		})
 		.otherwise({
-			redirectTo: '/home'
+			redirectTo: '/'
 		});
 
 	$locationProvider.hashPrefix('!');
