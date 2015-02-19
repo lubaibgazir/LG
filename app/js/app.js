@@ -12,13 +12,18 @@ app.config(['$routeProvider', '$locationProvider', '$httpProvider', function ($r
 
 	$routeProvider
 		.when('/', {
-			templateUrl: 'templates/header.html'
+			url: '/',
+			templateUrl: 'templates/layout.html'
+		})
+		.when('/welcome', {
+			url: '/welcome',
+			templateUrl: 'templates/welcome.html'
 		})
 		.otherwise({
 			redirectTo: '/'
 		});
 
-	$locationProvider.hashPrefix('!');
+	//$locationProvider.hashPrefix('!');
 
 	// This is required for Browser Sync to work poperly
 	$httpProvider.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';

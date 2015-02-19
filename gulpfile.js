@@ -4,6 +4,7 @@ var gulp       = require('gulp'),
 	bowerFiles = require('main-bower-files'),
 	stylish    = require('jshint-stylish'),
 	path       = require('path'),
+	http       = require('http'),
 	open       = require('open'),
 	fs         = require('fs'),
 	chalk      = require('chalk'),
@@ -26,7 +27,8 @@ var	SETTINGS = {
 		templates: 'app/templates/',
 		images: 'app/img/',
 		fonts: 'app/fonts/',
-		bower: 'bower_components/'
+		bower: 'bower_components/',
+		escape: 'partials/'
 	},
 	build: {
 		app: 'build/',
@@ -203,8 +205,12 @@ gulp.task('copy', ['copy:html', 'copy:images', 'copy:fonts', 'copy:html:root']);
 gulp.task('copy:html', function () {
 	
 	console.log('-------------------------------------------------- COPY :html');
-	gulp.src([SETTINGS.src.templates + '*.html', SETTINGS.src.templates + '**/*.html'])
+	return gulp.src([SETTINGS.src.templates + '*.html', SETTINGS.src.templates + '**/*.html', '!' + SETTINGS.src.templates + '/**/' + SETTINGS.src.escape + '/*.*', '!' + SETTINGS.src.templates + '/' + SETTINGS.src.escape + '/*.*'])
 		.pipe(gulpPlugins.if(isProduction, gulpPlugins.minifyHtml({comments: false, quotes: true, spare: true, empty: true, cdata: true})))
+		.pipe(gulpPlugins.fileInclude({
+			prefix: '@@',
+			basepath: '@file'
+		}))
 		.pipe(gulp.dest(SETTINGS.build.templates))
 		.pipe(gulpPlugins.connect.reload());
 });
@@ -212,8 +218,12 @@ gulp.task('copy:html', function () {
 gulp.task('copy:html:root', function () {
 	
 	console.log('-------------------------------------------------- COPY :html:root');
-	gulp.src(SETTINGS.src.app + '*.html')
+	return gulp.src(SETTINGS.src.app + '*.html')
 		.pipe(gulpPlugins.if(isProduction, gulpPlugins.minifyHtml({comments: false, quotes: true, spare: true, empty: true, cdata: true})))
+		.pipe(gulpPlugins.fileInclude({
+			prefix: '@@',
+			basepath: '@file'
+		}))
 		.pipe(gulp.dest(SETTINGS.build.app))
 		.pipe(gulpPlugins.connect.reload());
 });

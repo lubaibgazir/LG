@@ -21,6 +21,7 @@
     "gulp-filter": "*",
     "gulp-watch": "~0.3.3",
     "gulp-zip": "~0.1.2",
+    "gulp-file-include": "~0.3.1",
     "main-bower-files": "*",
     "gulp-load-plugins": "^0.5.1",
     "gulp-task-listing": "~0.3.0",
