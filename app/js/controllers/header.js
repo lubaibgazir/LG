@@ -4,17 +4,19 @@
 ==================================================================*/
 /*global app*/
 
-app.controller('HeaderCtrl', ['$scope', function ($scope) {
+app.controller('HeaderCtrl', ['$scope', '$state', function ($scope, $state) {
 
 	'use strict';
 
-	console.log('Controller ===  HeaderCtrl');
+	$scope.navigationMenus = ['welcome', 'work', 'skills'];
 	
-	$scope.isActive = false;
+	$scope.isActive = function (navigationMenu) {
+		return navigationMenu == $state.current.url ? true : false;	
+	}
 
-	 $scope.navigate = function() {
-		$scope.isActive = true;
-		console.log('$scope.isActive', $scope.isActive);
+	$scope.navigate = function(navigationMenu) {
+	    $state.go('home.'+navigationMenu)
+
 	}
 
 

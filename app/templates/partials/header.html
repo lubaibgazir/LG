@@ -3,7 +3,7 @@
 		<div class="header-content">
 			<a class="logo">lubaib gazir</a>
 			<nav class="navigation-menu">
-				<a ng-class="{'active' :isActive}" ng-repeat="navigationMenu in navigationMenus" ng-click="navigate()">{{navigationMenu}}</a>
+				<a ng-class="{'active' :isActive(navigationMenu)}" ng-repeat="navigationMenu in navigationMenus" ng-click="navigate(navigationMenu)">{{navigationMenu}}</a>
 			</nav>	
 		</div>
 	</div>

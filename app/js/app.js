@@ -19,9 +19,9 @@ app.config(['$routeProvider', '$locationProvider', '$httpProvider', '$stateProvi
 			url: 'welcome',
 			templateUrl: 'templates/welcome.html'
 		})
-		.state('home.portfolio', {
-			url: 'portfolio',
-			templateUrl: 'templates/portfolio.html'
+		.state('home.work', {
+			url: 'work',
+			templateUrl: 'templates/work.html'
 		})
 		.state('home.skills', {
 			url: 'skills',
@@ -47,7 +47,7 @@ app.run(['$rootScope', '$state', function ($rootScope, $state) {
 	
 	'use strict';
 
-	$rootScope.navigationMenus = ['welcome', 'work', 'skills'];
+	
 
 	
 	console.log('Angular.js run() function...');
