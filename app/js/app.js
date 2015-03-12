@@ -12,25 +12,25 @@ app.config(['$routeProvider', '$locationProvider', '$httpProvider', '$stateProvi
 
 	$stateProvider
 		.state('home', {
-			url: '/home',
+			url: '/',
 			templateUrl: 'templates/layout.html',
 		})
 		.state('home.welcome', {
-			url: '/welcome',
+			url: 'welcome',
 			templateUrl: 'templates/welcome.html'
 		})
 		.state('home.portfolio', {
-			url: '/portfolio',
+			url: 'portfolio',
 			templateUrl: 'templates/portfolio.html'
 		})
 		.state('home.skills', {
-			url: '/skills',
+			url: 'skills',
 			templateUrl: 'templates/skills.html'
 		});
 
 		
 
-		$urlRouterProvider.otherwise('home/welcome');
+		$urlRouterProvider.otherwise('welcome');
 
 	//$locationProvider.hashPrefix('!');
 
@@ -43,12 +43,13 @@ app.config(['$routeProvider', '$locationProvider', '$httpProvider', '$stateProvi
 =>                  lg App Run()  
 ==================================================================*/
 
-app.run(['$rootScope', function ($rootScope) {
+app.run(['$rootScope', '$state', function ($rootScope, $state) {
 	
 	'use strict';
 
-	$rootScope.navigationMenus = ['welcome', 'work', 'skills']
+	$rootScope.navigationMenus = ['welcome', 'work', 'skills'];
 
+	
 	console.log('Angular.js run() function...');
 }]);
 

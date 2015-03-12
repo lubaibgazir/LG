@@ -1,9 +1,9 @@
-<header>
+<header ng-controller="HeaderCtrl">
 	<div class="container">
 		<div class="header-content">
 			<a class="logo">lubaib gazir</a>
 			<nav class="navigation-menu">
-				<a href="#" ng-repeat="navigationMenu in navigationMenus">{{navigationMenu}}</a>
+				<a ng-class="{'active' :isActive}" ng-repeat="navigationMenu in navigationMenus" ng-click="navigate()">{{navigationMenu}}</a>
 			</nav>	
 		</div>
 	</div>
