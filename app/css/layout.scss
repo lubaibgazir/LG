@@ -1,5 +1,15 @@
 $total-width: 100%;
 
+::-moz-selection { 
+    color: #fff;
+    background: $color-theme;
+}
+
+::selection {
+    color: #fff; 
+    background: $color-theme;
+}
+
 html,body {
    position: absolute;
    width: 100%;
@@ -96,7 +106,7 @@ header {
 
 /* ---> Section: WELCOME <--- */
 #welcome {
-	h1{
+	.welcome-text{
 		color: #fff;
 		text-align: center;
 		position: fixed;
@@ -105,7 +115,30 @@ header {
 		width: 100%;
 		font-size: em(31);
 		line-height: 49px;
+
+		.black{
+			-webkit-animation: blink 1s linear;
+		}
 	}
+	.arrow-redirect {
+		cursor: pointer;
+		color: #000;
+		font-size: em(20);
+		position: fixed;
+		bottom: 25px;
+		left: 50%;
+		@include transition(all, 0.3s, ease-in-out);
+		.arrow {
+			font-size: em(50);
+			line-height: 0px;
+			color: #000;
+			display: block;
+		}
+		&:hover{color: #fff;}
+	}
+}
+@-webkit-keyframes blink{
+  to{opacity: .0;}
 }
 
 

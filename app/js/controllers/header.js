@@ -4,7 +4,7 @@
 ==================================================================*/
 /*global app*/
 
-app.controller('HeaderCtrl', ['$scope', '$state', function ($scope, $state) {
+app.controller('HeaderCtrl', ['$scope', '$rootScope', '$state', function ($scope, $rootScope, $state) {
 
 	'use strict';
 
@@ -14,9 +14,8 @@ app.controller('HeaderCtrl', ['$scope', '$state', function ($scope, $state) {
 		return navigationMenu == $state.current.url ? true : false;	
 	}
 
-	$scope.navigate = function(navigationMenu) {
+	$rootScope.navigate = function(navigationMenu) {
 	    $state.go('home.'+navigationMenu)
-
 	}
 
 
