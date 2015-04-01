@@ -86,6 +86,16 @@ $browser-context: 16; // Default
 }
 
 /*-------------------------------------------------
+ MIXIN :: ANIMATION
+-------------------------------------------------*/
+@mixin animation($animationName, $duration, $type) {
+      animation: $animationName $duration $type;
+      -moz-animation: $animationName $duration $type;
+      -webkit-animation: $animationName $duration $type;
+
+}
+
+/*-------------------------------------------------
  MIXIN :: FONT STYLE
 -------------------------------------------------*/
 //Font styling font-family, font-size and color of the font 
