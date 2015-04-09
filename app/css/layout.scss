@@ -51,7 +51,21 @@ a {
 	@include clearfix();
 }
 
-
+/* ---> Icons <--- */
+.iconFa {
+	font-family: 'FontAwesome';
+	font-style: normal;
+	position: relative;
+}
+.iconRedirectNxt:before {
+	content: '\f04b';
+}
+.iconPrev .iconFa:before {
+	content: '\f100';
+}
+.iconNxt .iconFa:before {
+	content: '\f101';
+}
 
 /* ---> Header <--- */
 header {
@@ -138,11 +152,9 @@ header {
 		bottom: 25px;
 		left: 50%;
 		@include transition(all, 0.3s, ease-in-out);
-		.arrow {
-			font-size: em(50);
-			line-height: 0px;
+		.iconRedirectNxt:before {
+			font-size: em(16);
 			color: #000;
-			display: block;
 		}
 		&:hover{color: #fff;}
 	}
@@ -161,6 +173,37 @@ header {
 #work {
 	/*background: url(../img/pattern.png) repeat #fff;*/
 	background: #E8EAE9;
+	.iconPrev, .iconNxt {
+		display: block;
+		width: 57px;
+		height: 54px;
+		line-height: 50px;
+		background: #000;
+		color: #fff;
+		position: fixed;
+		top: 50%;
+		margin-top: -27px;
+		z-index: 5;
+		cursor: pointer;
+		text-align: center;
+		.iconFa:before {
+			color: #fff;
+			position: relative;
+			font-size: em(24);
+			left: 0;
+			@include transition(all, 0.3s, ease-in-out);
+		}
+		&:hover {
+			.iconFa:before {
+				color: $color-theme;
+			}
+		}
+	}
+	.iconPrev { left: 0;}
+	.iconNxt { right: 0;}
+	
+	
+	
 
 }
 
