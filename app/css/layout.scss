@@ -108,12 +108,38 @@ header {
 	}
 }
 
+/* ---> Section Animation <--- */
+.slide-section {
+    @include transition(all, 0.7s, ease-in-out);
+    @include translateX(0);
+}
 
-/* ---> Section <--- */
-.section {
+.slide-section.ng-enter {
+   @include translateX(100%);
+}
+
+.slide-section.ng-enter.ng-enter-active, .slide-section.ng-leave {
+    @include translateX(0);
+}
+
+.slide-section.ng-leave.ng-leave-active {
+    @include translateX(-100%);
+}
+
+
+.view-container {
 	position: absolute;
 	left: 0;
 	top: 85px;
+	right: 0;
+	bottom: 0;
+}
+
+/* ---> Section <--- */
+.view-section {
+	position: absolute;
+	left: 0;
+	top:0;
 	right: 0;
 	bottom: 0;
 }

@@ -86,6 +86,15 @@ $browser-context: 16; // Default
 }
 
 /*-------------------------------------------------
+ MIXIN :: TRANSLATE-X - TRANSFORM
+-------------------------------------------------*/
+@mixin translateX($translateX) {
+  transform: translateX($translateX);
+  -moz-transform: translateX($translateX);
+  -webkit-transform: translateX($translateX);
+}
+
+/*-------------------------------------------------
  MIXIN :: ANIMATION
 -------------------------------------------------*/
 @mixin animation($animationName, $duration, $type) {
