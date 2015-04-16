@@ -14,9 +14,17 @@ app.controller('HeaderCtrl', ['$scope', '$rootScope', '$state', function ($scope
 		return navigationMenu == $state.current.url ? true : false;	
 	}
 
-	$rootScope.navigate = function(navigationMenu) {
-	    $state.go('home.'+navigationMenu)
+	$rootScope.isSlideRight = false;
+	
+	$scope.navigate = function(navigationMenu) {
+		var currentUrlIndex = $scope.navigationMenus.indexOf($state.current.url);
+		$state.go('home.'+navigationMenu);
+		var latestUrlIndex = $scope.navigationMenus.indexOf(navigationMenu);
+		$rootScope.isSlideRight = (latestUrlIndex < currentUrlIndex ? true : false);
+	    
 	}
+
+	
 
 
 

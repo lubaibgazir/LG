@@ -46,11 +46,8 @@ app.config(['$routeProvider', '$locationProvider', '$httpProvider', '$stateProvi
 app.run(['$rootScope', '$state', function ($rootScope, $state) {
 	
 	'use strict';
-
-	
-
-	
 	console.log('Angular.js run() function...');
+
 }]);
 
 

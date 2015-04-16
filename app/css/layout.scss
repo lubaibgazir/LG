@@ -117,6 +117,9 @@ header {
 .slide-section.ng-enter {
    @include translateX(100%);
 }
+.slide-section.ng-enter.slideRight {
+   @include translateX(-100%);
+}
 
 .slide-section.ng-enter.ng-enter-active, .slide-section.ng-leave {
     @include translateX(0);
@@ -124,6 +127,9 @@ header {
 
 .slide-section.ng-leave.ng-leave-active {
     @include translateX(-100%);
+}
+.slide-section.ng-leave.ng-leave-active.slideRight {
+    @include translateX(100%);
 }
 
 
