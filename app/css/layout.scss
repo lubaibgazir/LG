@@ -206,7 +206,7 @@ header {
 	/*background: url(../img/pattern.png) repeat #fff;*/
 	background: #E8EAE9;
 	overflow-y: scroll;
-	paddiing-bottom:50px;
+	padding-bottom:50px;
 	.iconPrev, .iconNxt {
 		display: block;
 		width: 57px;
@@ -246,23 +246,24 @@ header {
 			&:before{
 				content:'';
 				position: absolute;
+				z-index: 1;
 				top: 0;
 				left: 0;
 				width: 100%;
 				height: 100%;
 				border-right: 1px solid #E8EAE9;
 				border-bottom: 1px solid #E8EAE9;
+				@include transition(all, 0.3s, ease-in-out);
 			}
-
-
 			img {
 				display: block;
 				vertical-align: middle;
 				width: 100%; 
 				@include transition(all, 0.3s, ease-in-out);
 			}
-			&:hover img {
-				transform: scale(1.1) rotate(-3deg);
+			&:hover {
+				img { @include scaleRotate(1.1, -3deg); }
+				&:before { background: rgba(255,255,255,0.5); }
 			}
 		}
 	}
