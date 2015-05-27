@@ -205,6 +205,8 @@ header {
 #work {
 	/*background: url(../img/pattern.png) repeat #fff;*/
 	background: #E8EAE9;
+	overflow-y: scroll;
+	paddiing-bottom:50px;
 	.iconPrev, .iconNxt {
 		display: block;
 		width: 57px;
@@ -233,6 +235,39 @@ header {
 	}
 	.iconPrev { left: 0;}
 	.iconNxt { right: 0;}
+
+	.work-items {
+		li {
+			cursor: pointer;
+			float: left;
+			overflow: hidden;
+			width: 33.33%;
+			position: relative;
+			&:before{
+				content:'';
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				border-right: 1px solid #E8EAE9;
+				border-bottom: 1px solid #E8EAE9;
+			}
+
+
+			img {
+				display: block;
+				vertical-align: middle;
+				width: 100%; 
+				@include transition(all, 0.3s, ease-in-out);
+			}
+			&:hover img {
+				transform: scale(1.1) rotate(-3deg);
+			}
+		}
+	}
+
+
 }
 
 /* ---> Section: SKILLS <--- */
