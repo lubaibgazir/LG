@@ -108,17 +108,21 @@ app.controller('WorkCtrl', ['$scope', '$rootScope', '$state', function ($scope, 
 	];
 
 	$scope.workItemsPerPage = 6;
-	$scope.workItemsSegments = [];
-
+	$scope.currentSet = 6;
+	var i = 0;
 	$scope.loadWorkItemsSegment = function() {
-		for(var i = 0; i < $scope.workItemsPerPage; i++) {
+		$scope.workItemsSegments = [];
+		for(i; i < $scope.workItemsPerPage; i++) {
 			$scope.workItemsSegments.push($scope.workItems[i]);
 		}
 	}
 	$scope.loadWorkItemsSegment();
-	
+
 	$scope.nextSegment = function() {
+		i = i + 1;
+		$scope.workItemsPerPage = $scope.workItemsPerPage + $scope.currentSet;
 		$scope.loadWorkItemsSegment();
+		console.log("$scope.workItemsSegments=======", $scope.workItemsSegments);
 	}
 	
 	console.log("$scope.workItemsSegments>>>>>>", $scope.workItemsSegments);
