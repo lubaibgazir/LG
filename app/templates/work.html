@@ -2,9 +2,9 @@
 	<div class="container">
 		<h1 class="section-head">Work</h1>
 		<ul class="work-items">
-			<li ng-repeat="item in workItemsSegments"><img src="{{item.imageSrc}}"/></li>
+			<li ng-repeat="item in workItemsSegments track by $index">{{item.title}}<img src="{{item.imageSrc}}"/></li>
 		</ul>
 	</div>
-	<div class="iconPrev"><i class="iconFa"></i></div>
+	<div class="iconPrev" ng-click="prevSegment()"><i class="iconFa"></i></div>
 	<div class="iconNxt" ng-click="nextSegment()"><i class="iconFa"></i></div>
 </section>

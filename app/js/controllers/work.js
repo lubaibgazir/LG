@@ -119,10 +119,15 @@ app.controller('WorkCtrl', ['$scope', '$rootScope', '$state', function ($scope, 
 	$scope.loadWorkItemsSegment();
 
 	$scope.nextSegment = function() {
-		i = i + 1;
 		$scope.workItemsPerPage = $scope.workItemsPerPage + $scope.currentSet;
 		$scope.loadWorkItemsSegment();
-		console.log("$scope.workItemsSegments=======", $scope.workItemsSegments);
+		console.log("$scope.workItemsSegments++++++", $scope.workItemsSegments);
+	}
+	$scope.prevSegment = function() {
+		i=i-$scope.currentSet;
+		$scope.workItemsPerPage = $scope.workItemsPerPage - $scope.currentSet;
+		$scope.loadWorkItemsSegment();
+		console.log("$scope.workItemsSegments------", $scope.workItemsSegments);
 	}
 	
 	console.log("$scope.workItemsSegments>>>>>>", $scope.workItemsSegments);
