@@ -1,13 +1,8 @@
-<section class="view-section" id="work">
+<section class="view-section" id="work" ng-controller="WorkCtrl">
 	<div class="container">
 		<h1 class="section-head">Work</h1>
 		<ul class="work-items">
-			<li><img src="img/work/port-0.jpg" /></li>
-			<li><img src="img/work/port-0.jpg" /></li>
-			<li><img src="img/work/port-0.jpg" /></li>
-			<li><img src="img/work/port-0.jpg" /></li>
-			<li><img src="img/work/port-0.jpg" /></li>
-			<li><img src="img/work/port-0.jpg" /></li>
+			<li ng-repeat="item in workItemsSegments"><img src="{{item.imageSrc}}"/></li>
 		</ul>
 	</div>
 	<div class="iconPrev"><i class="iconFa"></i></div>

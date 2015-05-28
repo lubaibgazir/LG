@@ -264,7 +264,7 @@ header {
 			&:hover {
 				img { @include scaleRotate(1.1, -3deg); }
 				&:before { background: rgba(255,255,255,0.5); }
-			}
+			} 
 		}
 	}
 
