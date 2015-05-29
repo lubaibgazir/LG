@@ -107,30 +107,30 @@ app.controller('WorkCtrl', ['$scope', '$rootScope', '$state', function ($scope, 
 		},
 	];
 
-	$scope.workItemsPerPage = 6;
-	$scope.currentSet = 6;
-	var i = 0;
-	$scope.loadWorkItemsSegment = function() {
-		$scope.workItemsSegments = [];
-		for(i; i < $scope.workItemsPerPage; i++) {
-			$scope.workItemsSegments.push($scope.workItems[i]);
-		}
-	}
-	$scope.loadWorkItemsSegment();
+	$scope.currentIndex = 0;
 
-	$scope.nextSegment = function() {
-		$scope.workItemsPerPage = $scope.workItemsPerPage + $scope.currentSet;
-		$scope.loadWorkItemsSegment();
-		console.log("$scope.workItemsSegments++++++", $scope.workItemsSegments);
-	}
-	$scope.prevSegment = function() {
-		i=i-$scope.currentSet;
-		$scope.workItemsPerPage = $scope.workItemsPerPage - $scope.currentSet;
-		$scope.loadWorkItemsSegment();
-		console.log("$scope.workItemsSegments------", $scope.workItemsSegments);
-	}
+	$scope.nextSet = function() {
+		$scope.currentIndex < $scope.workItems.length - 1 ? $scope.currentIndex=$scope.currentIndex+6 : $scope.currentIndex = 0;
+	};
+
+	$scope.prevSet = function() {
+		$scope.currentIndex > 0 ? $scope.currentIndex=$scope.currentIndex-6 : $scope.currentIndex = $scope.workItems.length - 1;
+	};
+
+
+	$scope.$watch('currentIndex', function() {
+		
+		$scope.workItemSegment = [];
+		for($scope.currentIndex; $scope.currentIndex<6; $scope.currentIndex++) {
+			$scope.workItemSegment.push($scope.workItems[$scope.currentIndex]);
+		}
+		//console.log('$scope.workItemSegment------------', $scope.workItemSegment);
+		
+		
+	});
+
 	
-	console.log("$scope.workItemsSegments>>>>>>", $scope.workItemsSegments);
+	
 
 }]);
 
