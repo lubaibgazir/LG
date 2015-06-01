@@ -108,23 +108,27 @@ app.controller('WorkCtrl', ['$scope', '$rootScope', '$state', function ($scope, 
 	];
 
 	$scope.currentIndex = 0;
+	$scope.NoOfThumbnailsPerPage = 6;
 
 	$scope.nextSet = function() {
-		$scope.currentIndex < $scope.workItems.length - 1 ? $scope.currentIndex=$scope.currentIndex+6 : $scope.currentIndex = 0;
+		$scope.currentIndex < $scope.workItems.length - 1 ? $scope.currentIndex = $scope.currentIndex + $scope.NoOfThumbnailsPerPage : $scope.currentIndex = 0;
 	};
 
 	$scope.prevSet = function() {
-		$scope.currentIndex > 0 ? $scope.currentIndex=$scope.currentIndex-6 : $scope.currentIndex = $scope.workItems.length - 1;
+		$scope.currentIndex > 0 ? $scope.currentIndex = $scope.currentIndex - $scope.NoOfThumbnailsPerPage : $scope.currentIndex = $scope.workItems.length - 1;
 	};
 
+	
 
 	$scope.$watch('currentIndex', function() {
 		
 		$scope.workItemSegment = [];
-		for($scope.currentIndex; $scope.currentIndex<6; $scope.currentIndex++) {
-			$scope.workItemSegment.push($scope.workItems[$scope.currentIndex]);
+		for(var i = $scope.currentIndex; i < $scope.currentIndex + $scope.NoOfThumbnailsPerPage; i++) {
+			if($scope.workItems[i]){
+				$scope.workItemSegment.push($scope.workItems[i]);
+			}
 		}
-		//console.log('$scope.workItemSegment------------', $scope.workItemSegment);
+		
 		
 		
 	});

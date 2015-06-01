@@ -237,6 +237,10 @@ header {
 	.iconNxt { right: 0;}
 
 	.work-items {
+		  display: inline-block; 
+		  width: 100%;
+		  @include transition(all, 0.3s, ease-in-out);
+		  
 		li {
 			cursor: pointer;
 			float: left;
