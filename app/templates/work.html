@@ -2,9 +2,11 @@
 	<div class="container">
 		<h1 class="section-head">Work</h1>
 		<ul class="work-items">
-			<li ng-repeat="item in workItemSegment track by $index">{{item.title}}<img src="{{item.imageSrc}}"/></li>
+			<li ng-click="nokatte()" ng-repeat="item in workItemSegment">{{item.title}}<img src="{{item.imageSrc}}"/></li>
 		</ul>
 	</div>
 	<div class="iconPrev" ng-click="prevSet()"><i class="iconFa"></i></div>
 	<div class="iconNxt" ng-click="nextSet()"><i class="iconFa"></i></div>
 </section>
+
+<div ui-view></div>

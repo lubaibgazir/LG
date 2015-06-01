@@ -23,6 +23,10 @@ app.config(['$routeProvider', '$locationProvider', '$httpProvider', '$stateProvi
 			url: 'work',
 			templateUrl: 'templates/work.html'
 		})
+		.state('home.work.portt', {
+			url: '/portt',
+			templateUrl: 'templates/skills.html'
+		})
 		.state('home.skills', {
 			url: 'skills',
 			templateUrl: 'templates/skills.html'

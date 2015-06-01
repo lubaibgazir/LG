@@ -118,20 +118,18 @@ app.controller('WorkCtrl', ['$scope', '$rootScope', '$state', function ($scope, 
 		$scope.currentIndex > 0 ? $scope.currentIndex = $scope.currentIndex - $scope.NoOfThumbnailsPerPage : $scope.currentIndex = $scope.workItems.length - 1;
 	};
 
-	
-
 	$scope.$watch('currentIndex', function() {
-		
 		$scope.workItemSegment = [];
 		for(var i = $scope.currentIndex; i < $scope.currentIndex + $scope.NoOfThumbnailsPerPage; i++) {
 			if($scope.workItems[i]){
 				$scope.workItemSegment.push($scope.workItems[i]);
 			}
 		}
-		
-		
-		
 	});
+
+	$scope.nokatte = function() {
+		$state.go('home.work.portt');
+	};
 
 	
 	

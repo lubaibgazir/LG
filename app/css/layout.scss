@@ -259,6 +259,34 @@ header {
 				border-bottom: 1px solid #E8EAE9;
 				@include transition(all, 0.3s, ease-in-out);
 			}
+
+			/*Thumbnails set annimation*/
+			&.ng-enter {
+			    -webkit-transition:0.5s linear all;
+			    -moz-transition:0.5s linear all;
+			    -o-transition:0.5s linear all;
+			    transition:0.5s linear all;
+			   
+			    opacity: 0;
+			    left: -50px;
+			}
+			 
+			&.ng-enter.ng-enter-active {
+			    opacity: 1;
+			    left: 0;
+			}
+			 
+			&.ng-leave {
+			  -webkit-animation:0.5s my_animation;
+			  -moz-animation:0.5s my_animation;
+			  -o-animation:0.5s my_animation;
+			  animation:0.5s my_animation;
+			}
+
+
+
+
+
 			img {
 				display: block;
 				vertical-align: middle;
@@ -271,6 +299,26 @@ header {
 			} 
 		}
 	}
+
+
+
+ 
+@keyframes my_animation {
+  from {opacity: 1;left: 0;}
+  to {opacity: 0;left: -50px;}
+}
+@-webkit-keyframes my_animation {
+  from {opacity: 1;left: 0;}
+  to {opacity: 0;left: -50px;}
+}
+@-moz-keyframes my_animation {
+  from {opacity: 1;left: 0;}
+  to {opacity: 0;left: -50px;}
+}
+@-o-keyframes my_animation {
+  from {opacity: 1;left: 0;}
+  to {opacity: 0;left: -50px;}
+}
 
 
 }
