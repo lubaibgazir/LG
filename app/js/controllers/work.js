@@ -127,8 +127,8 @@ app.controller('WorkCtrl', ['$scope', '$rootScope', '$state', function ($scope, 
 		}
 	});
 
-	$scope.nokatte = function() {
-		$state.go('home.work.portt');
+	$scope.workDetail = function() {
+		$state.go('home.work.workDetail');
 	};
 
 	
