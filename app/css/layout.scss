@@ -311,7 +311,7 @@ header {
 	position: absolute;
 	width: 100%;
 	height: 100%;
-	top: 0;
+	top: 0px;
 	bottom: 0;
 	left: 0;
 	right: 0;
@@ -347,28 +347,7 @@ header {
 	}
 }
 /* ---> Work detail popup Animation <--- */
-.slideEffect {
-    @include transition(all, 0.7s, ease-in-out);
-    @include translateY(0);
-}
 
-.slideEffect.ng-enter {
-   @include translateY(100%);
-}
-.slideEffect.ng-enter.slideRight {
-   @include translateY(-100%);
-}
-
-.slideEffect.ng-enter.ng-enter-active, &.slideEffect.ng-leave {
-    @include translateY(0);
-}
-
-.slideEffect.ng-leave.ng-leave-active {
-    @include translateY(-100%);
-}
-.slideEffect.ng-leave.ng-leave-active.slideRight {
-    @include translateY(100%);
-}
 
 /* ---> Section: SKILLS <--- */
 #skills {
