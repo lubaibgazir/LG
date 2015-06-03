@@ -10,8 +10,15 @@ app.directive('popupclose', ['$rootScope', function ($rootScope) {
 
 	return {
 		restrict: 'A',
-		link: function (scope, element, attrs) {
-			console.log('Directive === popupclose');
+		link: function ($scope, element, attrs) {
+
+			element.on('click', function() {
+				var $popupContainer = $(element).parent('.work-detail');
+				$popupContainer.addClass('slideEffectDown');
+				setTimeout(function() {
+					window.history.back();
+				},200);
+			});
 		}
 	};
 }]);

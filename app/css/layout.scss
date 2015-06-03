@@ -318,6 +318,7 @@ header {
 	z-index: 9999;
 	background: url(../img/pattern.png) repeat #f0f0f0;
 	overflow-y: scroll;
+	@include transition(all, 0.3s, ease-in-out);
 
 	.work-detail-close {
 		position: absolute;
@@ -347,7 +348,12 @@ header {
 	}
 }
 /* ---> Work detail popup Animation <--- */
-
+.slideEffectUp{
+	@include translateY(0%);
+}
+.slideEffectDown{
+	@include translateY(100%);
+}
 
 /* ---> Section: SKILLS <--- */
 #skills {
