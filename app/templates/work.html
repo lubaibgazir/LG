@@ -2,7 +2,12 @@
 	<div class="container">
 		<h1 class="section-head">Work</h1>
 		<ul class="work-items">
-			<li ng-click="workDetail()" ng-repeat="item in workItemSegment">{{item.title}}<img src="{{item.imageSrc}}"/></li>
+			<li ng-click="workDetail()" ng-repeat="item in workItemSegment">
+				<img src="{{item.imageSrc}}"/>
+				<div class="work-item-desc">
+					<span class="work-item-title">{{item.title}}</span>
+				</div>
+			</li>
 		</ul>
 	</div>
 	<div class="iconPrev" ng-click="prevSet()"><i class="iconFa"></i></div>
