@@ -319,7 +319,7 @@ header {
 	background: url(../img/pattern.png) repeat #f0f0f0;
 	overflow-y: scroll;
 	@include transition(all, 0.3s, ease-in-out);
-
+	
 	.work-detail-close {
 		position: absolute;
 		top: 20px;

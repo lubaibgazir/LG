@@ -127,6 +127,14 @@ app.controller('WorkCtrl', ['$scope', '$rootScope', '$state', function ($scope, 
 		}
 	});
 
+	$rootScope.$watch(function() {
+		if($state.current.url.indexOf('work-detail') > -1) {
+			setTimeout(function() {
+				$('.work-detail').removeClass('slideEffectDown').addClass('slideEffectUp');
+			},200);
+		}
+	});
+
 	$scope.workDetail = function() {
 		$state.go('home.work.workDetail');
 	};

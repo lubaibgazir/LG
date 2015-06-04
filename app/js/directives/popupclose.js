@@ -14,7 +14,7 @@ app.directive('popupclose', ['$rootScope', function ($rootScope) {
 
 			element.on('click', function() {
 				var $popupContainer = $(element).parent('.work-detail');
-				$popupContainer.addClass('slideEffectDown');
+				$popupContainer.removeClass('slideEffectUp').addClass('slideEffectDown');
 				setTimeout(function() {
 					window.history.back();
 				},200);
