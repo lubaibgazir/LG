@@ -11,102 +11,142 @@ app.controller('WorkCtrl', ['$scope', '$rootScope', '$state', function ($scope, 
 	$scope.workItems = [
 
 		{	
+			"id" : "001",
 			"imageSrc" : "img/work/port-0.jpg",
 			"title" : "Title 1",
-			
+			"role" : "balah blah blah 1", 
+			"url" : "http://www.url1.com",
 		},
 		{	
+			"id" : "002",
 			"imageSrc" : "img/work/port-0.jpg",
 			"title" : "Title 2",
-			
+			"role" : "balah blah blah 2", 
+			"url" : "http://www.url2.com",
 		},
 		{	
+			"id" : "003",
 			"imageSrc" : "img/work/port-0.jpg",
 			"title" : "Title 3",
-			
+			"role" : "balah blah blah 3", 
+			"url" : "http://www.url3.com",
 		},
 		{	
+			"id" : "004",
 			"imageSrc" : "img/work/port-0.jpg",
 			"title" : "Title 4",
-			
+			"role" : "balah blah blah 4", 
+			"url" : "http://www.url4.com",
 		},
 		{	
+			"id" : "005",
 			"imageSrc" : "img/work/port-0.jpg",
 			"title" : "Title 5",
-			
+			"role" : "balah blah blah 5", 
+			"url" : "http://www.url5.com",
 		},
 		{	
+			"id" : "006",
 			"imageSrc" : "img/work/port-0.jpg",
 			"title" : "Title 6",
-			
+			"role" : "balah blah blah 6", 
+			"url" : "http://www.url6.com",
 		},
 		{	
+			"id" : "007",
 			"imageSrc" : "img/work/port-0.jpg",
 			"title" : "Title 7",
-			
+			"role" : "balah blah blah 7", 
+			"url" : "http://www.url7.com",
 		},
 		{	
+			"id" : "008",
 			"imageSrc" : "img/work/port-0.jpg",
 			"title" : "Title 8",
-			
+			"role" : "balah blah blah 8", 
+			"url" : "http://www.url8.com",
 		},
 		{	
+			"id" : "009",
 			"imageSrc" : "img/work/port-0.jpg",
 			"title" : "Title 9",
-			
+			"role" : "balah blah blah 9", 
+			"url" : "http://www.url9.com",
 		},
 		{	
+			"id" : "010",
 			"imageSrc" : "img/work/port-0.jpg",
 			"title" : "Title 10",
-			
+			"role" : "balah blah blah 10", 
+			"url" : "http://www.url10.com",
 		},
 		{	
+			"id" : "011",
 			"imageSrc" : "img/work/port-0.jpg",
 			"title" : "Title 11",
-			
+			"role" : "balah blah blah 11", 
+			"url" : "http://www.url11.com",
 		},
 		{	
+			"id" : "012",
 			"imageSrc" : "img/work/port-0.jpg",
 			"title" : "Title 12",
-			
+			"role" : "balah blah blah 12", 
+			"url" : "http://www.url12.com",
 		},
 		{	
+			"id" : "013",
 			"imageSrc" : "img/work/port-0.jpg",
 			"title" : "Title 13",
-			
+			"role" : "balah blah blah 13", 
+			"url" : "http://www.url13.com",
 		},
 		{	
+			"id" : "014",
 			"imageSrc" : "img/work/port-0.jpg",
 			"title" : "Title 14",
-			
+			"role" : "balah blah blah 14", 
+			"url" : "http://www.url14.com",
 		},
 		{	
+			"id" : "015",
 			"imageSrc" : "img/work/port-0.jpg",
 			"title" : "Title 15",
-			
+			"role" : "balah blah blah 15", 
+			"url" : "http://www.url15.com",
 		},
 		{	
+			"id" : "016",
 			"imageSrc" : "img/work/port-0.jpg",
 			"title" : "Title 16",
-			
+			"role" : "balah blah blah 16", 
+			"url" : "http://www.url16.com",
 		},
 		{	
+			"id" : "017",
 			"imageSrc" : "img/work/port-0.jpg",
 			"title" : "Title 17",
-			
+			"role" : "balah blah blah 17", 
+			"url" : "http://www.url17.com",
 		},
 		{	
+			"id" : "018",
 			"imageSrc" : "img/work/port-0.jpg",
 			"title" : "Title 18",
-			
+			"role" : "balah blah blah 18", 
+			"url" : "http://www.url18.com",
 		},
 		{	
+			"id" : "019",
 			"imageSrc" : "img/work/port-0.jpg",
 			"title" : "Title 19",
-			
+			"role" : "balah blah blah 19", 
+			"url" : "http://www.url19.com",
 		},
 	];
 
+
+	//Work thumbnail pagination
 	$scope.currentIndex = 0;
 	$scope.NoOfThumbnailsPerPage = 6;
 
@@ -135,8 +175,15 @@ app.controller('WorkCtrl', ['$scope', '$rootScope', '$state', function ($scope, 
 		}
 	});
 
-	$scope.workDetail = function() {
-		$state.go('home.work.workDetail');
+	$scope.workDetail = function(itemId, itemImage, itemTitle, itemRole, itemUrl) {
+		$rootScope.workItemId = itemId;
+		$rootScope.workItemImage = itemImage;
+		$rootScope.workItemTitle = itemTitle;
+		$rootScope.workItemRole = itemRole;
+		$rootScope.workItemUrl = itemUrl;
+
+		$state.go('home.work.workDetail', {workItemId: $scope.workItemId, workItemTitle: $scope.workItemTitle.replace(/\s/g, '-').toLowerCase() });
+		
 	};
 
 	

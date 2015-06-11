@@ -24,8 +24,9 @@ app.config(['$routeProvider', '$locationProvider', '$httpProvider', '$stateProvi
 			templateUrl: 'templates/work.html'
 		})
 		.state('home.work.workDetail', {
-			url: '/work-detail',
-			templateUrl: 'templates/work_detail.html'
+			url: '/work-detail/:workItemId/:workItemTitle',
+			templateUrl: 'templates/work_detail.html',
+
 		})
 		.state('home.skills', {
 			url: 'skills',

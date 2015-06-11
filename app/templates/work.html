@@ -2,7 +2,7 @@
 	<div class="container">
 		<h1 class="section-head">Work</h1>
 		<ul class="work-items">
-			<li ng-click="workDetail()" ng-repeat="item in workItemSegment">
+			<li ng-click="workDetail(item.id, item.imageSrc, item.title, item.role, item.url)" ng-repeat="item in workItemSegment">
 				<img src="{{item.imageSrc}}"/>
 				<div class="work-item-desc">
 					<span class="work-item-title">{{item.title}}</span>
