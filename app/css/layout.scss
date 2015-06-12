@@ -35,6 +35,17 @@ a {
 		color: $color-theme;
 	}
 }
+p {
+	line-height: 22px;margin-bottom: 20px;
+	color: #333;
+}
+h1 {
+	font-family: 'nexa_boldregular';
+	font-size: em(32);
+	color: #000;
+	line-height: 50px;
+  	margin-bottom: 14px;
+}
 .black {
 	color: #000!important;
 }
@@ -367,7 +378,19 @@ header {
 	}
 	
 	.container {
-		padding: 25px 0;
+		padding: 50px 0;
+	}
+	.work-item-preview-img {
+		@include column(6);
+		img {
+			max-width: 100%;
+		}
+	}
+	.work-item-desc {
+		@include column(6);
+		h1 {
+			margin-top: 10px;
+		}
 	}
 }
 /* ---> Work detail popup Animation <--- */

@@ -1,11 +1,13 @@
 <div class="work-detail slideEffectDown">
 	<div class="work-detail-close" popupclose>X</div>
-	
-		WORK DETAIL <br>
-		ID: {{workItemId}} <br>
-		TITLE: {{workItemTitle}} <br>
-		ROLE: {{workItemRole}} <br>
-		URL: {{workItemUrl}} <br>
-	
+	<div class="container">
+		<div class="work-item-preview-img">
+			<img src="{{workItemImage}}" />
+		</div>
+		<div class="work-item-desc">
+			<h1>{{workItemTitle}}</h1>
+			<p><strong>Role:</strong> {{workItemRole}}</p>
+			<a target="_blank" href="{{workItemUrl}}">VISIT</a>
+		</div>
 	</div>
 </div>
