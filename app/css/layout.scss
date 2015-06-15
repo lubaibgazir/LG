@@ -308,14 +308,17 @@ header {
 				@include transition(all, 0.3s, ease-in-out);
 
 				.work-item-title {
-					display: block;
+					display: table-cell;
 					vertical-align: middle;
 					font-family: 'nexa_boldregular';
 					color: #000;
 				}
 			}
 			&:hover {
-				img { @include scaleRotate(1.1, -3deg); }
+				img { 
+					//@include scaleRotate(1.1, -3deg); 
+					@include scale(1.1); 
+				}
 				&:before { background: rgba(255,255,255,0.7); }
 				.work-item-desc{ opacity: 1;}
 			} 

@@ -3,7 +3,7 @@
 		<h1 class="section-head">Work</h1>
 		<ul class="work-items">
 			<li ng-click="workDetail(item.id, item.imageSrc, item.title, item.role, item.url)" ng-repeat="item in workItemSegment">
-				<img src="{{item.imageSrc}}"/>
+				<img alt="{{item.title}}" src="{{item.imageSrc}}"/>
 				<div class="work-item-desc">
 					<span class="work-item-title">{{item.title}}</span>
 				</div>
