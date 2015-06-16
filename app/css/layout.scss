@@ -337,8 +337,12 @@ header {
 				}
 				/*&:before { background: rgba(255,255,255,0.7); }*/
 				/*.work-item-desc{ opacity: 1;}*/
-				.work-item-title:after {
-					@include translateX(0);
+				.work-item-title {
+					color: $color-theme;
+					&:after {
+						@include translateX(0);
+						background: $color-theme;
+					}
 				}
 			} 
 		}
