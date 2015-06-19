@@ -186,7 +186,8 @@ app.controller('WorkCtrl', ['$scope', '$rootScope', '$state', function ($scope, 
 	$scope.NoOfThumbnailsPerPage = 6;
 
 	$scope.nextSet = function() {
-		$scope.currentIndex < $scope.workItems.length - 1 ? $scope.currentIndex = $scope.currentIndex + $scope.NoOfThumbnailsPerPage : $scope.currentIndex = 0;
+		$scope.currentIndex < $scope.workItems.length-1 ? $scope.currentIndex = $scope.currentIndex + $scope.NoOfThumbnailsPerPage : $scope.currentIndex = 0;
+		
 	};
 
 	$scope.prevSet = function() {
@@ -194,12 +195,17 @@ app.controller('WorkCtrl', ['$scope', '$rootScope', '$state', function ($scope, 
 	};
 
 	$scope.$watch('currentIndex', function() {
-		$scope.workItemSegment = [];
-		for(var i = $scope.currentIndex; i < $scope.currentIndex + $scope.NoOfThumbnailsPerPage; i++) {
-			if($scope.workItems[i]){
-				$scope.workItemSegment.push($scope.workItems[i]);
+		if($scope.workItems[$scope.currentIndex]) {
+			$scope.workItemSegment = [];
+			for(var i = $scope.currentIndex; i < $scope.currentIndex + $scope.NoOfThumbnailsPerPage; i++) {
+				if($scope.workItems[i]){
+					$scope.workItemSegment.push($scope.workItems[i]);
+				}
 			}
 		}
+		console.log('workItemSegment>>>>>', $scope.workItemSegment);
+		console.log('currentIndex>>>>>', $scope.currentIndex);
+		console.log('$scope.workItems.length>>>>>', $scope.workItems.length);
 	});
 
 	$rootScope.$watch(function() {
