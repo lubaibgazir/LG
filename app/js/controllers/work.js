@@ -178,6 +178,20 @@ app.controller('WorkCtrl', ['$scope', '$rootScope', '$state', function ($scope, 
 			"role" : "balah blah blah 19", 
 			"url" : "http://www.url19.com",
 		},
+		{	
+			"id" : "025",
+			"imageSrc" : "img/work/port-0.jpg",
+			"title" : "Title 19",
+			"role" : "balah blah blah 19", 
+			"url" : "http://www.url19.com",
+		},
+		{	
+			"id" : "026",
+			"imageSrc" : "img/work/port-0.jpg",
+			"title" : "Title 19",
+			"role" : "balah blah blah 19", 
+			"url" : "http://www.url19.com",
+		},
 	];
 
 
@@ -186,12 +200,17 @@ app.controller('WorkCtrl', ['$scope', '$rootScope', '$state', function ($scope, 
 	$scope.NoOfThumbnailsPerPage = 6;
 
 	$scope.nextSet = function() {
-		$scope.currentIndex < $scope.workItems.length-1 ? $scope.currentIndex = $scope.currentIndex + $scope.NoOfThumbnailsPerPage : $scope.currentIndex = 0;
-		
+		$scope.currentIndex < $scope.workItems.length-1 ? $scope.currentIndex += $scope.NoOfThumbnailsPerPage : $scope.currentIndex = 0;
+		if($scope.currentIndex > $scope.workItems.length-1) {
+			$scope.currentIndex = 0;
+		}
 	};
 
 	$scope.prevSet = function() {
-		$scope.currentIndex > 0 ? $scope.currentIndex = $scope.currentIndex - $scope.NoOfThumbnailsPerPage : $scope.currentIndex = $scope.workItems.length - 1;
+		$scope.currentIndex > 0 ? $scope.currentIndex -= $scope.NoOfThumbnailsPerPage : $scope.currentIndex = $scope.workItems.length - ($scope.workItems.length % $scope.NoOfThumbnailsPerPage);
+		if($scope.currentIndex == $scope.workItems.length) {
+			$scope.currentIndex = $scope.workItems.length - $scope.NoOfThumbnailsPerPage;
+		}
 	};
 
 	$scope.$watch('currentIndex', function() {
@@ -203,9 +222,6 @@ app.controller('WorkCtrl', ['$scope', '$rootScope', '$state', function ($scope, 
 				}
 			}
 		}
-		console.log('workItemSegment>>>>>', $scope.workItemSegment);
-		console.log('currentIndex>>>>>', $scope.currentIndex);
-		console.log('$scope.workItems.length>>>>>', $scope.workItems.length);
 	});
 
 	$rootScope.$watch(function() {
