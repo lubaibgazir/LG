@@ -1,8 +1,9 @@
 <section class="view-section" id="work" ng-controller="WorkCtrl">
 	<div class="container">
 		<h1 class="section-head">Work</h1>
+		<img class="loadingSpinner" src="img/load.gif" ng-show="loadingSpinner" />
 		<ul class="work-items">
-			<li ng-click="workDetail(item.id, item.imageSrc, item.title, item.role, item.url)" ng-repeat="item in workItemSegment">
+			<li ng-hide="loadingSpinner" ng-click="workDetail(item.id, item.imageSrc, item.title, item.role, item.url)" ng-repeat="item in workItemSegment" repeat-complete>
 				<img alt="{{item.title}}" src="{{item.imageSrc}}"/>
 				<div class="work-item-desc">
 					<span class="work-item-title">{{item.title}}</span>

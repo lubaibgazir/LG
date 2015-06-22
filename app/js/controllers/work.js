@@ -7,7 +7,8 @@
 app.controller('WorkCtrl', ['$scope', '$rootScope', '$state', function ($scope, $rootScope, $state) {
 
 	'use strict';
-
+	$rootScope.loadingSpinner = true;
+	
 	$scope.workItems = [
 
 		{	
@@ -187,6 +188,13 @@ app.controller('WorkCtrl', ['$scope', '$rootScope', '$state', function ($scope, 
 		},
 		{	
 			"id" : "026",
+			"imageSrc" : "img/work/port-0.jpg",
+			"title" : "Title 19",
+			"role" : "balah blah blah 19", 
+			"url" : "http://www.url19.com",
+		},
+		{	
+			"id" : "027",
 			"imageSrc" : "img/work/port-0.jpg",
 			"title" : "Title 19",
 			"role" : "balah blah blah 19", 
