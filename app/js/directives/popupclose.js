@@ -17,6 +17,7 @@ app.directive('popupclose', ['$rootScope', function ($rootScope) {
 				$popupContainer.removeClass('slideEffectUp').addClass('slideEffectDown');
 				setTimeout(function() {
 					window.history.back();
+					$rootScope.loadingSpinner = false;
 				},200);
 			});
 		}

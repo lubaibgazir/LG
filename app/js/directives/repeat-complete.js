@@ -12,7 +12,7 @@ app.directive('repeatComplete', ['$rootScope', function ($rootScope) {
 		restrict: 'A',
 		link: function (scope, element, attrs) {
 			if(scope.$last) {
-				//$rootScope.loadingSpinner = false;
+				$rootScope.loadingSpinner = false;
 			}
 		}
 	};
