@@ -481,7 +481,6 @@ header {
 	background: #343434;
 	color: #F6F7F7;
 	overflow-y: scroll;
-	padding-bottom:50px;
 	.section-head{ color: #F6F7F7;}
 	.skills-list {
 		width: 80%;
@@ -524,7 +523,7 @@ header {
 					width: 0;
 					height: 100%;
 					opacity: 0;
-					border: 2px solid #fff;
+					border: 2px solid $color-theme;
 					position: absolute;
 					left: 0;
 					top: 0;
@@ -551,7 +550,7 @@ header {
 			}
 			&:hover {
 				.skill-img img {
-					border-color: #fff;
+					border-color: $color-theme;
 				}
 				.meter:after{
 					width:100%;
@@ -559,6 +558,13 @@ header {
 				}
 			}
 		}
+	}
+
+	footer {
+		text-align: right;
+		margin-top: 50px;
+		padding:0 20px 15px;
+		font-size: 12px;
 	}
 }
 
