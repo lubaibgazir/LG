@@ -96,15 +96,15 @@ header {
 	.logo {
 		font-family: 'nexa_boldregular';
 		/*font-size: em(28);*/
-		font-size: 26px;
-		margin-top: 23px;
+		font-size: 30px;
+		margin-top: 25px;
 		float: left;
 		cursor: pointer;
 	}
 
 	.navigation-menu {
 		float: right;
-		margin-top: 32px;
+		margin-top: 25px;
 		position: relative;
 		display: block;
 		
@@ -255,6 +255,7 @@ header {
 		  @include transition(all, 0.3s, ease-in-out);
 		  
 		li {
+			text-align: left;
 			cursor: pointer;
 			overflow: hidden;
 			width: 33.33%;
@@ -501,7 +502,7 @@ header {
 				img{
 					display: inline-block;
 					@include borderRadius(50%);
-					border:2px solid transparent;
+					border:3px solid transparent;
 					@include transition(all, 0.3s, ease-in-out);
 				}
 			}
@@ -551,6 +552,7 @@ header {
 			&:hover {
 				.skill-img img {
 					border-color: $color-theme;
+					@include scale(0.93)
 				}
 				.meter:after{
 					width:100%;

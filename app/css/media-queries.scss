@@ -1,0 +1,60 @@
+/* ---> Larger than Desktop HD <--- */
+@media (min-width: 1200px) {
+
+}
+
+@media (max-width: 1100px) {
+	#work .iconPrev, #work .iconNxt {
+		top: 55px;
+	}
+}
+
+@media (max-width: 1023px) {
+	header .logo {
+		margin-left: 15px;
+	}
+	header .navigation-menu {
+		margin-right: 15px;
+	}
+	#work .work-items {
+		text-align: center;
+	}
+	#work .work-items li {
+		width: 48%;
+	}
+}
+
+@media (max-width: 767px) {
+	header {
+		height: 60px;
+	}
+	header .logo {
+		font-size: 26px;
+		margin-top: 15px;
+	}
+	.view-container {
+		top: 60px;
+	}
+	header .navigation-menu {
+		width: 30px;
+		height: 10px;
+		cursor: pointer;
+	}
+	header .navigation-menu a {
+		display: none;
+	}
+	header .navigation-menu:before, header .navigation-menu:after {
+		content: '';
+		position: absolute;
+		right: 0;
+		top: 0;
+		width: 18px;
+		height: 3px;
+		background: #808694;
+		display: block;
+	}
+	
+	header .navigation-menu:after {
+		top: 7px;
+	}
+}
