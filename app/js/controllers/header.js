@@ -25,12 +25,6 @@ app.controller('HeaderCtrl', ['$scope', '$rootScope', '$state', function ($scope
 	}
 
 
-
-
-	
-
-
-
 }]);
 
 

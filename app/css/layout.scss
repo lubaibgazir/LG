@@ -102,11 +102,13 @@ header {
 		cursor: pointer;
 	}
 
+	/* ---> Navigation Menu <--- */
 	.navigation-menu {
 		float: right;
 		margin-top: 25px;
 		position: relative;
 		display: block;
+		@include transition(all, 0.3s, ease-in-out);
 		
 		a {
 			color: #808694;
