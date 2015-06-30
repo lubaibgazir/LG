@@ -18,10 +18,15 @@ app.directive('mobileMenu', ['$rootScope', function ($rootScope) {
 
 					element.on('click', function() {
 						element.toggleClass('mobile-menu');
+						if(element.hasClass('mobile-menu')) {
+							$(element).closest('header').addClass('h100');
+							
+						}
+						else{
+							$(element).closest('header').removeClass('h100');
+						}
 					});
-					//console.log(window.innerWidth);
 				}
-				
 			};
 			scope.checkWindowWidth();
 

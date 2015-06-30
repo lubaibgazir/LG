@@ -49,6 +49,9 @@ h1 {
 .black {
 	color: #000!important;
 }
+.h100 {
+	height: 100px!important;
+}
 
 .app-wrapper {
 	position: absolute;
@@ -87,6 +90,7 @@ header {
 	top: 0;
 	left: 0;
 	z-index: 9999;
+	@include transition(all, 0.3s, ease-in-out);
 	@include boxShadow(0, 8px, 0, rgba(0,0,0,0.07), $inset: false);
 
 	.header-content {
