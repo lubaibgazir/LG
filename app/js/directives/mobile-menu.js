@@ -11,8 +11,7 @@ app.directive('mobileMenu', ['$rootScope', function ($rootScope) {
 	return {
 		restrict: 'A',
 		link: function (scope, element, attrs) {
-			scope.isMobile = false;
-
+			
 			scope.checkWindowWidth = function() {
 				if(window.innerWidth < 768) {
 
