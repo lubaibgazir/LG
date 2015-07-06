@@ -10,16 +10,16 @@ app.directive('mobileMenu', ['$rootScope', function ($rootScope) {
 
 	return {
 		restrict: 'A',
-		link: function (scope, element, attrs) {
-			
+		link: function (scope, element, attrs, $window) {
+			var $myWindow = angular.element($window);
+
 			scope.checkWindowWidth = function() {
-				if(window.innerWidth < 768) {
+				if(window.innerWidth < 1024) {
 
 					element.on('click', function() {
 						element.toggleClass('mobile-menu');
 						if(element.hasClass('mobile-menu')) {
 							$(element).closest('header').addClass('h100');
-							
 						}
 						else{
 							$(element).closest('header').removeClass('h100');
@@ -29,7 +29,7 @@ app.directive('mobileMenu', ['$rootScope', function ($rootScope) {
 			};
 			scope.checkWindowWidth();
 
-			angular.element(window).on('resize', function() {
+			$myWindow.on('resize', function() {
 				scope.checkWindowWidth();
 			})
 		}

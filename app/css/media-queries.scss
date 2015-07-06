@@ -10,36 +10,19 @@
 }
 
 @media (max-width: 1023px) {
-	header .logo {
-		margin-left: 15px;
-	}
-	header .navigation-menu {
-		/*margin-right: 15px;*/
-	}
-	#work .work-items {
-		text-align: center;
-	}
-	#work .work-items li {
-		width: 48%;
-	}
-}
-
-@media (max-width: 767px) {
 	header {
 		height: 60px;
 	}
 	header .logo {
+		margin-left: 15px;
 		font-size: 26px;
 		margin-top: 15px;
 	}
-	.view-container {
-		top: 60px;
-	}
 	header .navigation-menu {
-		padding: 43px 0 10px 0;
+		/*padding: 43px 0 10px 0;*/
 		cursor: pointer;
 		margin-top: 0;
-		top: 25px;
+		top: 65px;
 		width: 100%;
 		position: absolute;
 		left: 0;
@@ -51,7 +34,7 @@
 		content: '';
 		position: absolute;
 		right: 25px;
-		top: 0;
+		top: -40px;
 		width: 18px;
 		height: 3px;
 		background: #808694;
@@ -60,7 +43,7 @@
 	}
 	
 	header .navigation-menu:after {
-		top: 7px;
+		top: -33px;
 	}
 
 	/*Mobile specific navigation menu*/
@@ -70,11 +53,11 @@
 			&.mobile-menu {
 				&:before {
 					@include rotate(45deg);
-					top: 3px;
+					top: -37px;
 				}
 				&:after {
 					@include rotate(135deg);
-					top: 3px;
+					top: -37px;
 				}
 				a {
 					text-align: center;
@@ -91,6 +74,18 @@
 			position: absolute;
 			bottom: 40px;
 		}
+	}
+	.view-container {
+		top: 60px;
+	}
+
+
+
+	#work .work-items {
+		text-align: center;
+	}
+	#work .work-items li {
+		width: 48%;
 	}
 
 	.work-detail .container {
@@ -112,11 +107,29 @@
 	}
 }
 
+@media (max-width: 767px) {
+	
+	
+}
+
 @media (max-width: 479px) {
+	header .navigation-menu a {
+		font-size: 20px;
+	}
+	
+	#welcome .welcome-text {
+		font-size: 22px;
+		line-height: 28px;
+	}
+	#welcome .arrow-redirect {
+		font-size: 20px;
+	}
+
+
 	#work .work-items li {
 		width: 100%;
 	}
-	#work .iconPrev, #work .iconNxt {
+	/*#work .iconPrev, #work .iconNxt {
 		bottom: 0;
 		top: auto;
 	 	right: 0;
@@ -124,9 +137,26 @@
 	#work .iconPrev {
 		bottom: 55px;
 		left: auto;
+	}*/
+
+	#skills .skills-list li {
+		height: 130px;
 	}
+	#skills .skills-list li .skill-img {
+		width: 130px;
+		height: 130px;
+	}
+
 
 	#skills .skills-list li .meter {
 		@include rotate(-90deg);
+		height: 35px;
+  		line-height: 35px;
+  		margin-top: -18px;
+  		left: -30px;
+  		width: 35%;
+	}
+	#skills .skills-list li .meter .meter-value {
+		  font-size: 26px;
 	}
 }

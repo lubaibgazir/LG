@@ -12,6 +12,7 @@ $total-width: 100%;
 
 html,body {
    position: absolute;
+   min-width: 320px;
    width: 100%;
    height: 100%;
    top: 0;
@@ -203,6 +204,7 @@ header {
 		position: fixed;
 		bottom: 25px;
 		left: 50%;
+		margin-left: -30px;
 		@include transition(all, 0.3s, ease-in-out);
 		.iconRedirectNxt:before {
 			font-size: em(16);
@@ -425,7 +427,7 @@ header {
 	}
 	
 	.container {
-		padding: 50px 0;
+		padding: 55px 0 50px;
 	}
 	.work-item-preview-img {
 		@include column(7);
@@ -558,7 +560,7 @@ header {
 			&:hover {
 				.skill-img img {
 					border-color: $color-theme;
-					@include scale(0.93)
+					@include scale(0.93);
 				}
 				.meter:after{
 					width:100%;
