@@ -1,49 +1,16 @@
-<section class="view-section" id="skills">
+<section class="view-section" id="skills" ng-controller="SkillsCtrl">
 	<div class="container">
 		<h1 class="section-head">Skills</h1>
-		<!-- <ul class="skills-list">
-			<li title="HTML5/CSS3"><img src="img/skills/htmlcss.jpg"></li>
-			<li title="Javascript"><img src="img/skills/js.jpg"></li>
-			<li title="Angular JS"><img src="img/skills/js.jpg"></li>
-			<li title="Responsive Design"><img src="img/skills/responsive.jpg"></li>
-			<li title="Photoshop"><img src="img/skills/photoshop.jpg"></li>
-		</ul> -->
+		
 		<ul class="skills-list">
-			<li title="HTML5/CSS3">
-				<div class="skill-img"><img src="img/skills/port-0.jpg" ></div>
+			<li ng-repeat="item in skillsItems" title="{{item.title}}">
+				<div class="skill-img"><img src="{{item.imgSrc}}" /></div>
 				<div class="meter">
-					<span class="meter-level" style="width:50%;"></span>
-					<span class="meter-value">50%</span>
+					<span class="meter-level" style="width:{{item.strength}}"></span>
+					<span class="meter-value">{{item.strength}}</span>
 				</div>
 			</li>
-			<li title="Javascript">
-				<div class="skill-img"><img src="img/skills/port-0.jpg" ></div>
-				<div class="meter">
-					<span class="meter-level" style="width:60%;"></span>
-					<span class="meter-value">60%</span>
-				</div>
-			</li>
-			<li title="Angular JS">
-				<div class="skill-img"><img src="img/skills/port-0.jpg" ></div>
-				<div class="meter">
-					<span class="meter-level" style="width:40%;"></span>
-					<span class="meter-value">40%</span>
-				</div>
-			</li>
-			<li title="Responsive Design">
-				<div class="skill-img"><img src="img/skills/port-0.jpg" ></div>
-				<div class="meter">
-					<span class="meter-level" style="width:90%;"></span>
-					<span class="meter-value">90%</span>
-				</div>
-			</li>
-			<li title="Photoshop">
-				<div class="skill-img"><img src="img/skills/port-0.jpg" ></div>
-				<div class="meter">
-					<span class="meter-level" style="width:35%;"></span>
-					<span class="meter-value">35%</span>
-				</div>
-			</li>
+
 		</ul>
 	</div>
 
