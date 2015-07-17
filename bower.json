@@ -8,16 +8,17 @@
     "angular-sanitize": "*",
     "angular-route": "*",
     "angular-animate": "*",
-    "angular-ui-utils": "*",
+    "angular-ui-utils": "~2.0.0",
     "angular-ui-router": "*",
     "jquery": "*",
-    "modernizr": "*" 
+    "modernizr": "*"
   },
   "devDependencies": {
     "angular-mocks": "*",
     "angular-scenario": "*"
   },
-  "overrides": {
-
+  "overrides": {},
+  "resolutions": {
+    "angular-ui-utils": "~2.0.0"
   }
 }

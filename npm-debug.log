@@ -1,0 +1,109 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'install', 'ui.event' ]
+2 info using npm@2.11.3
+3 info using node@v0.12.7
+4 verbose install initial load of /Users/lubaib/workspace/LG/package.json
+5 warn package.json lg@0.0.0 No repository field.
+6 warn package.json lg@0.0.0 No license field.
+7 verbose installManyTop reading scoped package data from /Users/lubaib/workspace/LG/node_modules/browser-sync/package.json
+8 verbose installManyTop reading scoped package data from /Users/lubaib/workspace/LG/node_modules/chalk/package.json
+9 verbose installManyTop reading scoped package data from /Users/lubaib/workspace/LG/node_modules/gulp/package.json
+10 verbose installManyTop reading scoped package data from /Users/lubaib/workspace/LG/node_modules/gulp-concat/package.json
+11 verbose installManyTop reading scoped package data from /Users/lubaib/workspace/LG/node_modules/gulp-connect/package.json
+12 verbose installManyTop reading scoped package data from /Users/lubaib/workspace/LG/node_modules/gulp-file-include/package.json
+13 verbose installManyTop reading scoped package data from /Users/lubaib/workspace/LG/node_modules/gulp-filter/package.json
+14 verbose installManyTop reading scoped package data from /Users/lubaib/workspace/LG/node_modules/gulp-if/package.json
+15 verbose installManyTop reading scoped package data from /Users/lubaib/workspace/LG/node_modules/gulp-jshint/package.json
+16 verbose installManyTop reading scoped package data from /Users/lubaib/workspace/LG/node_modules/gulp-load-plugins/package.json
+17 verbose installManyTop reading scoped package data from /Users/lubaib/workspace/LG/node_modules/gulp-minify-css/package.json
+18 verbose installManyTop reading scoped package data from /Users/lubaib/workspace/LG/node_modules/gulp-minify-html/package.json
+19 verbose installManyTop reading scoped package data from /Users/lubaib/workspace/LG/node_modules/gulp-sass/package.json
+20 verbose installManyTop reading scoped package data from /Users/lubaib/workspace/LG/node_modules/gulp-task-listing/package.json
+21 verbose installManyTop reading scoped package data from /Users/lubaib/workspace/LG/node_modules/gulp-uglify/package.json
+22 verbose installManyTop reading scoped package data from /Users/lubaib/workspace/LG/node_modules/jshint-stylish/package.json
+23 verbose installManyTop reading scoped package data from /Users/lubaib/workspace/LG/node_modules/main-bower-files/package.json
+24 verbose installManyTop reading scoped package data from /Users/lubaib/workspace/LG/node_modules/map-stream/package.json
+25 verbose installManyTop reading scoped package data from /Users/lubaib/workspace/LG/node_modules/open/package.json
+26 verbose installManyTop reading scoped package data from /Users/lubaib/workspace/LG/node_modules/run-sequence/package.json
+27 verbose installManyTop reading scoped package data from /Users/lubaib/workspace/LG/node_modules/yargs/package.json
+28 info package.json gulp-if@1.2.5 No license field.
+29 info package.json gulp-minify-html@1.0.3 No license field.
+30 info package.json gulp-task-listing@1.0.1 No license field.
+31 verbose readDependencies loading dependencies from /Users/lubaib/workspace/LG/package.json
+32 silly cache add args [ 'ui.event', null ]
+33 verbose cache add spec ui.event
+34 silly cache add parsed spec { raw: 'ui.event',
+34 silly cache add   scope: null,
+34 silly cache add   name: 'ui.event',
+34 silly cache add   rawSpec: '',
+34 silly cache add   spec: '*',
+34 silly cache add   type: 'range' }
+35 silly addNamed ui.event@*
+36 verbose addNamed "*" is a valid semver range for ui.event
+37 silly addNameRange { name: 'ui.event', range: '*', hasData: false }
+38 silly mapToRegistry name ui.event
+39 silly mapToRegistry using default registry
+40 silly mapToRegistry registry https://registry.npmjs.org/
+41 silly mapToRegistry uri https://registry.npmjs.org/ui.event
+42 verbose addNameRange registry:https://registry.npmjs.org/ui.event not in flight; fetching
+43 verbose request uri https://registry.npmjs.org/ui.event
+44 verbose request no auth needed
+45 info attempt registry request try #1 at 11:14:26 PM
+46 verbose request id 6a691e405bac2b3b
+47 http request GET https://registry.npmjs.org/ui.event
+48 http 404 https://registry.npmjs.org/ui.event
+49 verbose headers { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+49 verbose headers   'content-type': 'application/json',
+49 verbose headers   'cache-control': 'max-age=0',
+49 verbose headers   'content-length': '51',
+49 verbose headers   'accept-ranges': 'bytes',
+49 verbose headers   date: 'Thu, 16 Jul 2015 17:44:32 GMT',
+49 verbose headers   via: '1.1 varnish',
+49 verbose headers   age: '0',
+49 verbose headers   connection: 'keep-alive',
+49 verbose headers   'x-served-by': 'cache-sin6922-SIN',
+49 verbose headers   'x-cache': 'MISS',
+49 verbose headers   'x-cache-hits': '0',
+49 verbose headers   'x-timer': 'S1437068672.000443,VS0,VE971' }
+50 silly get cb [ 404,
+50 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+50 silly get     'content-type': 'application/json',
+50 silly get     'cache-control': 'max-age=0',
+50 silly get     'content-length': '51',
+50 silly get     'accept-ranges': 'bytes',
+50 silly get     date: 'Thu, 16 Jul 2015 17:44:32 GMT',
+50 silly get     via: '1.1 varnish',
+50 silly get     age: '0',
+50 silly get     connection: 'keep-alive',
+50 silly get     'x-served-by': 'cache-sin6922-SIN',
+50 silly get     'x-cache': 'MISS',
+50 silly get     'x-cache-hits': '0',
+50 silly get     'x-timer': 'S1437068672.000443,VS0,VE971' } ]
+51 verbose stack Error: 404 Not Found: ui.event
+51 verbose stack     at CachingRegistryClient.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:245:14)
+51 verbose stack     at Request._callback (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:170:14)
+51 verbose stack     at Request.self.callback (/usr/local/lib/node_modules/npm/node_modules/request/request.js:354:22)
+51 verbose stack     at Request.emit (events.js:110:17)
+51 verbose stack     at Request.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1207:14)
+51 verbose stack     at Request.emit (events.js:129:20)
+51 verbose stack     at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1153:12)
+51 verbose stack     at IncomingMessage.emit (events.js:129:20)
+51 verbose stack     at _stream_readable.js:908:16
+51 verbose stack     at process._tickCallback (node.js:355:11)
+52 verbose statusCode 404
+53 verbose pkgid ui.event
+54 verbose cwd /Users/lubaib/workspace/LG
+55 error Darwin 14.4.0
+56 error argv "node" "/usr/local/bin/npm" "install" "ui.event"
+57 error node v0.12.7
+58 error npm  v2.11.3
+59 error code E404
+60 error 404 Not Found: ui.event
+60 error 404
+60 error 404 'ui.event' is not in the npm registry.
+60 error 404 You should bug the author to publish it (or use the name yourself!)
+60 error 404 It was specified as a dependency of 'lg'
+60 error 404
+60 error 404 Note that you can also install from a
+60 error 404 tarball, folder, http url, or git url.
+61 verbose exit [ 1, true ]

@@ -2,3 +2,5 @@ bower_components/
 build/
 node_modules/
 scss/
+bower.json/
+npm-debug.log/
