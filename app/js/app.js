@@ -34,6 +34,7 @@ app.config(['$routeProvider', '$locationProvider', '$httpProvider', '$stateProvi
 			templateUrl: 'templates/skills.html'
 		});
 
+
 		
 
 		$urlRouterProvider.otherwise('welcome');

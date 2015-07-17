@@ -286,7 +286,7 @@ header {
 				background: rgba(0,0,0,0.4);
 			}
 
-			/*Thumbnails set annimation*/
+			/*Thumbnails set animation*/
 			&.isVisible.ng-enter {
 			    @include transition(all, 0.5s, linear);
 			   	opacity: 0;

@@ -89,7 +89,7 @@
 	}
 
 	.work-detail .container {
-		padding-top: 230px;
+		padding-top: 250px;
 	}
 	.work-detail .work-item-preview-img {
 		@include column(12);
@@ -160,3 +160,25 @@
 		  font-size: 26px;
 	}
 }
+
+@media only screen and (max-device-width: 736px) and (min-device-width: 320px) and (orientation: landscape) {
+	#welcome .welcome-text {
+		font-size: 26px;
+		line-height: 34px;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
