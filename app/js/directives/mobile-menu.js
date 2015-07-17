@@ -2,7 +2,7 @@
 /*================================================================
 =>                  Directive = mobileMenu
 ==================================================================*/
-/*global app*/
+/*global app, angular, window, $*/
 
 app.directive('mobileMenu', ['$rootScope', function ($rootScope) {
    
@@ -31,7 +31,7 @@ app.directive('mobileMenu', ['$rootScope', function ($rootScope) {
 
 			$myWindow.on('resize', function() {
 				scope.checkWindowWidth();
-			})
+			});
 		}
 	};
 }]);

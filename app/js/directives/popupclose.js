@@ -2,7 +2,7 @@
 /*================================================================
 =>                  Directive = popupclose
 ==================================================================*/
-/*global app*/
+/*global app, $, window*/
 
 app.directive('popupclose', ['$rootScope', function ($rootScope) {
    
