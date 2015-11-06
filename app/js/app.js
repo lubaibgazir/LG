@@ -13,7 +13,7 @@ app.config(['$routeProvider', '$locationProvider', '$httpProvider', '$stateProvi
 	$stateProvider
 		.state('home', {
 			url: '/',
-			templateUrl: 'templates/layout.html',
+			templateUrl: 'templates/layout.html'
 		})
 		.state('home.welcome', {
 			url: 'welcome',
@@ -25,19 +25,14 @@ app.config(['$routeProvider', '$locationProvider', '$httpProvider', '$stateProvi
 		})
 		.state('home.work.workDetail', {
 			url: '/work-detail/:workItemId/:workItemTitle',
-			templateUrl: 'templates/work_detail.html',
-			controller: 'WorkCtrl',
-
+			templateUrl: 'templates/work_detail.html'
 		})
 		.state('home.skills', {
 			url: 'skills',
 			templateUrl: 'templates/skills.html'
 		});
 
-
-		
-
-		$urlRouterProvider.otherwise('welcome');
+	$urlRouterProvider.otherwise('welcome');
 
 	//$locationProvider.hashPrefix('!');
 
@@ -53,7 +48,7 @@ app.config(['$routeProvider', '$locationProvider', '$httpProvider', '$stateProvi
 app.run(['$rootScope', '$state', function ($rootScope, $state) {
 	
 	'use strict';
-	console.log('Angular.js run() function...');
+	
 
 }]);
 

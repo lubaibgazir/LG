@@ -4,7 +4,7 @@
 		
 		<ul class="skills-list">
 			<li ng-repeat="item in skillsItems" title="{{item.title}}">
-				<div class="skill-img"><img src="{{item.imgSrc}}" /></div>
+				<div class="skill-img"><img ng-src="{{item.imgSrc}}" /></div>
 				<div class="meter">
 					<span class="meter-level" style="width:{{item.strength}}"></span>
 					<span class="meter-value">{{item.strength}}</span>
