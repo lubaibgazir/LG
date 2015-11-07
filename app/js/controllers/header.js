@@ -23,14 +23,7 @@ app.controller('HeaderCtrl', ['$scope', '$rootScope', '$state', function ($scope
 		$rootScope.isSlideRight = (latestUrlIndex < currentUrlIndex ? true : false);
 	};
 
-	// show/hide spinner on ui-view change
-	$rootScope.$on('$stateChangeStart',function (){
-        $rootScope.loadingSpinner = true;
- 	});
-
-  	$rootScope.$on('$stateChangeSuccess',function (){
-    	$rootScope.loadingSpinner = false;
- 	});
+	
 
 
 }]);
