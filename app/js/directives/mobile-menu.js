@@ -11,8 +11,7 @@ app.directive('mobileMenu', ['$rootScope', function ($rootScope) {
 	return {
 		restrict: 'A',
 		link: function (scope, element, attrs, $window) {
-			var $myWindow = angular.element($window);
-
+			
 			scope.checkWindowWidth = function() {
 				if(window.innerWidth < 1024) {
 
@@ -28,10 +27,11 @@ app.directive('mobileMenu', ['$rootScope', function ($rootScope) {
 				}
 			};
 			scope.checkWindowWidth();
-
-			$myWindow.on('resize', function() {
-				scope.checkWindowWidth();
-			});
+			
+			angular.element($(window)).bind('resize', function() {
+        		scope.checkWindowWidth();
+        		scope.$apply();
+      		});
 		}
 	};
 }]);
