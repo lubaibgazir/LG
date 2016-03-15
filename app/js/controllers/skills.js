@@ -18,7 +18,7 @@ app.controller('SkillsCtrl', ['$scope', function ($scope) {
 		{
 			'title' : 'AngularJS',
 			'imgSrc' : 'img/skills/angularjs.jpg',
-			'strength' : '75%'
+			'strength' : '50%'
 		},
 		{
 			'title' : 'Javascript',
