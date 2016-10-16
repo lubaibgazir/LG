@@ -23,7 +23,7 @@ app.controller('SkillsCtrl', ['$scope', function ($scope) {
 		{
 			'title' : 'Javascript',
 			'imgSrc' : 'img/skills/js.jpg',
-			'strength' : '60%'
+			'strength' : '65%'
 		},
 		{
 			'title' : 'Responsive Web',
