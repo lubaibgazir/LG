@@ -10,7 +10,7 @@ app.service('workService', ['$rootScope', function ($rootScope) {
 	var workDatas = [
 		{
 			'id' : '001',
-			'imageSrc' : 'img/work/lubaibgazir.jpg',
+			'imageSrc' : 'img/work/lubaibgazir_blue.jpg',
 			'title' : 'Lubaib Gazir',
 			'role' : 'HTML&CSS, Angular JS, Javascript; Responsive', 
 			'url' : 'http://www.lubaibgazir.in',
